@@ -8,7 +8,7 @@ Since this dataset is related to a publication and related experiments, we don't
 ## Pull Requests
 If there is an egregious error or problem in some part of the MuDoCo data, please do submit a pull request containing a fix.
 
-1. Fork the repo and create your branch from `master`.
+1. Fork the repo and create your branch from `main`.
 2. If you haven't already, complete the Contributor License Agreement ("CLA").
 
 ## Contributor License Agreement ("CLA")
