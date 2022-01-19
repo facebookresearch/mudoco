@@ -1,4 +1,6 @@
 """
+(c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
+
 Usage
 python utils/convert_jsonlines_to_v4_gold_conll \
     mudoco_{domain}.jsonlines \

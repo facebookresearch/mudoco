@@ -1,4 +1,6 @@
 """
+(c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
+
 Usage
 python utils/convert_json_to_jsonlines.py \
     "mudoco_*.json" \
