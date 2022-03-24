@@ -1,5 +1,5 @@
 """
-(c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
+Copyright (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
 Usage
 python utils/convert_jsonlines_to_v4_gold_conll \
@@ -7,8 +7,8 @@ python utils/convert_jsonlines_to_v4_gold_conll \
     moduco_{domain}.v4_gold_conll
 """
 
-import sys 
-import json 
+import sys
+import json
 
 if __name__ == "__main__":
     fin = open(sys.argv[1],"r",encoding="utf-8")
@@ -23,13 +23,13 @@ if __name__ == "__main__":
         if "/" in doc_id: # if english document, remove the id from the doc_id
             doc_id = "_".join(doc_id.split("_")[:-1])
 
-        fout.write(f"#begin document ({doc_id}); part 000\n") 
+        fout.write(f"#begin document ({doc_id}); part 000\n")
 
-        coref_str_list = []    
+        coref_str_list = []
         for sentence in doc["sentences"]:
             for token in sentence:
                 coref_str_list.append([])
-        
+
         for coref_idx,cluster in enumerate(doc["clusters"]):
             for pair in cluster:
                 if pair[0] == pair[1]:
@@ -48,8 +48,8 @@ if __name__ == "__main__":
                 else:
                     fout.write("|".join(coref_str_list[real_id]))
                 real_id += 1
-                
+
                 fout.write("\n")
             fout.write("\n")
-        
+
         fout.write("#end document\n")
